@@ -1,0 +1,42 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="250" cy="250" r="240" fill="url(#gradientBg)" />
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gradientBg" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6C63FF" />
+      <stop offset="100%" stop-color="#4FACFE" />
+    </linearGradient>
+    <linearGradient id="skinGradient" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB6B6" />
+      <stop offset="100%" stop-color="#FFA6A6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Body -->
+  <path d="M250 280 C 180 280 140 380 140 500 L360 500 C360 380 320 280 250 280Z" fill="#2A2A42" />
+  
+  <!-- Neck -->
+  <path d="M250 260 C220 260 210 280 210 300 L290 300 C290 280 280 260 250 260Z" fill="url(#skinGradient)" />
+  
+  <!-- Head -->
+  <circle cx="250" cy="200" r="100" fill="url(#skinGradient)" />
+  
+  <!-- Hair -->
+  <path d="M250 120 C180 120 160 170 160 200 C160 230 200 260 250 260 C300 260 340 230 340 200 C340 170 320 120 250 120Z" fill="#2A2A42" />
+  
+  <!-- Beard -->
+  <path d="M250 220 C220 220 200 240 200 280 C230 290 270 290 300 280 C300 240 280 220 250 220Z" fill="#2A2A42" />
+  
+  <!-- Eyes -->
+  <circle cx="210" cy="190" r="10" fill="#2A2A42" />
+  <circle cx="290" cy="190" r="10" fill="#2A2A42" />
+  
+  <!-- Smile -->
+  <path d="M220 230 Q250 250 280 230" fill="none" stroke="#2A2A42" stroke-width="5" stroke-linecap="round" />
+  
+  <!-- Suit Details -->
+  <path d="M250 280 L250 380" stroke="#6C63FF" stroke-width="4" />
+  <path d="M230 320 L270 320" stroke="#6C63FF" stroke-width="4" />
+</svg>

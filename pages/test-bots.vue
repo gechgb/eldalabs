@@ -2,14 +2,14 @@
   <div class="test-bots-page">
     <!-- Hero Section -->
     <section class="hero-section test-bots-hero">
-      <div class="hero-overlay"></div>
-      <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
+      <div class="hero-background">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+        <div class="gradient-blob blob-3"></div>
       </div>
+      <div class="hero-overlay"></div>
       <div class="container">
-        <div class="hero-content" style="animation: float 6s ease-in-out infinite;">
+        <div class="hero-content">
           <h1 class="hero-headline">Industry-Specific <span class="gradient-text">AI Bots</span></h1>
           <p class="hero-subheadline">Experience tailored AI solutions for your industry</p>
           <div class="hero-cta">
@@ -266,11 +266,54 @@ useHead({
 
 .hero-section {
   position: relative;
-  padding: 8rem 0;
+  height: 100vh;
+  width: 100%;
   overflow: hidden;
-  background: var(--gradient-primary);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
+  background: var(--page-bg);
+  margin: 0;
+  padding: 0;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.gradient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.6;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  top: -100px;
+  right: -100px;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  bottom: -50px;
+  left: -50px;
+}
+
+.blob-3 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero-overlay {
@@ -279,44 +322,8 @@ useHead({
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.3) 100%);
-}
-
-.floating-shapes {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  animation: float 6s ease-in-out infinite;
-}
-
-.shape-1 {
-  width: 300px;
-  height: 300px;
-  top: -150px;
-  right: -150px;
-}
-
-.shape-2 {
-  width: 200px;
-  height: 200px;
-  bottom: -100px;
-  left: -100px;
-}
-
-.shape-3 {
-  width: 150px;
-  height: 150px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .chat-container {

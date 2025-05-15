@@ -265,15 +265,20 @@ useHead({
 /* Blog Cards */
 .featured-post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 1rem;
 }
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: 2rem;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 1rem;
 }
 
 .blog-card {

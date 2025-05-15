@@ -149,9 +149,12 @@ useHead({
 /* Hero Section */
 .hero-section {
   position: relative;
-  padding: 8rem 0;
+  height: 100vh;
+  width: 100%;
   overflow: hidden;
   background: var(--page-bg);
+  margin: 0;
+  padding: 0;
 }
 
 .hero-background {
@@ -206,10 +209,16 @@ useHead({
   z-index: 2;
 }
 
-.hero-content {
+.hero-section .container {
   position: relative;
   z-index: 3;
   text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing);
 }
 
 .hero-text {
@@ -288,6 +297,15 @@ useHead({
 }
 
 /* Categories Section */
+.categories-section .container,
+.why-join-section .container,
+.positions-section .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+  width: 100%;
+}
+
 .category-list {
   display: flex;
   flex-wrap: wrap;
@@ -318,9 +336,20 @@ useHead({
 /* Benefits Grid */
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-top: 3rem;
+  margin: 3rem auto 0;
+  max-width: var(--max-width);
+  width: 100%;
+}
+
+.positions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 3rem auto 0;
+  max-width: var(--max-width);
+  width: 100%;
 }
 
 .benefit-card {

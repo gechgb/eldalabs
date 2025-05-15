@@ -54,7 +54,7 @@
           <!-- Team Member Cards -->
           <div class="team-card glass-card">
             <div class="member-image">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Team member" />
+              <img src="/assets/avatars/alex-avatar.svg" alt="Alex Johnson" class="member-photo" />
             </div>
             <div class="member-info">
               <h3 class="member-name">Alex Johnson</h3>
@@ -70,7 +70,7 @@
           
           <div class="team-card glass-card">
             <div class="member-image">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="Team member" />
+              <img src="/assets/avatars/sarah-avatar.svg" alt="Sarah Chen" class="member-photo" />
             </div>
             <div class="member-info">
               <h3 class="member-name">Sarah Chen</h3>
@@ -86,7 +86,7 @@
           
           <div class="team-card glass-card">
             <div class="member-image">
-              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Team member" />
+              <img src="/assets/avatars/michael-avatar.svg" alt="Michael Rodriguez" class="member-photo" />
             </div>
             <div class="member-info">
               <h3 class="member-name">Michael Rodriguez</h3>
@@ -334,71 +334,95 @@ useHead({
 /* Team Section Styles */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .team-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
   overflow: hidden;
-  transition: all 0.4s ease;
-  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(108, 99, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .member-image {
-  height: 300px;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 2rem auto 1rem;
+  border-radius: 50%;
   overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  padding: 2px;
 }
 
-.member-image img {
+.member-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.team-card:hover .member-image img {
-  transform: scale(1.1);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
 .member-info {
   padding: 1.5rem;
+  text-align: center;
 }
 
 .member-name {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .member-role {
-  color: var(--accent-color);
-  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--neutral-400);
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-bottom: 1rem;
 }
 
 .member-bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--neutral-300);
   margin-bottom: 1.5rem;
+  padding: 0 1rem;
 }
 
 .member-social {
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  color: var(--neutral-900);
+  width: 32px;
+  height: 32px;
+  color: var(--neutral-400);
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-  transform: translateY(-3px);
+  color: var(--accent-color);
+  transform: translateY(-2px);
 }
 
 /* Values Section Styles */

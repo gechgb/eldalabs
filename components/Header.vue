@@ -128,9 +128,10 @@ onUnmounted(() => {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
+  gap: 3rem;
 }
 
 .logo {
@@ -209,22 +210,26 @@ onUnmounted(() => {
 .desktop-menu {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
 }
 
 .desktop-menu li {
-  margin-left: 1.25rem;
   position: relative;
 }
 
-.desktop-menu li:first-child {
-  margin-left: 0;
+.desktop-menu .nav-link {
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
 /* CTA Button Styles */
 .cta-button {
   background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
   color: var(--neutral-900);
-  padding: 0.75rem 1.5rem;
+  padding: 0.625rem 1.25rem;
   border-radius: var(--radius-md);
   font-weight: 600;
   text-decoration: none;
@@ -356,10 +361,11 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  gap: 1.25rem;
+  padding: 2rem 0;
 }
 
 .mobile-menu li {
-  margin: 12px 0;
   width: 100%;
   text-align: center;
 }
